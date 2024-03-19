@@ -100,7 +100,7 @@ const updateBook = async (req, res) => {
 
             })
         }
-        const book = await bookModel.updateOne({ book_id: id }, {
+        const book = await bookModel.updateOne({ book_id: id }, {$set:{
             book_name,
             author_name,
             image,
@@ -111,7 +111,7 @@ const updateBook = async (req, res) => {
             purchase_amount,
             pages,
             ratings
-        });
+        }});
         return res.status(201).json({
             message: "Book updated",
             res: book

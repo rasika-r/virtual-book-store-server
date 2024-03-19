@@ -39,7 +39,7 @@ if (process.env.ENV == "DEV") {
 
     app.use('/transactions', transactionRouter);
 
-    app.use('/admin',isAdmin, adminRouter);
+    app.use('/admin', adminRouter);
 
     app.use('/otp', otpRouter);
 
